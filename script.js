@@ -58,7 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // but recalc initial active (useful after resize)
     setTimeout(setActiveOnLoad, 150);
   });
+  document.querySelectorAll('.nav-list a').forEach(a=>{
+  a.addEventListener('click', () => {
+    const nav = document.querySelector('.nav-list');
+    if (nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      const ham = document.querySelector('.hamburger');
+      if (ham) ham.classList.remove('open');
+    }
+  });
 });
+});
+
+
 // Animate skills progress bars when section is visible
 const skillsGrid = document.querySelector(".skills-grid");
 const skillsObserver = new IntersectionObserver(entries => {
