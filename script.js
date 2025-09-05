@@ -140,3 +140,19 @@ const contactObs = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 contactCards.forEach(card => contactObs.observe(card));
+
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Show success message
+  const msg = document.createElement("div");
+  msg.textContent = "✅ Thank you! Your message has been sent.";
+  msg.style.background = "#4CAF50";
+  msg.style.color = "white";
+  msg.style.padding = "10px";
+  msg.style.marginTop = "10px";
+  msg.style.borderRadius = "6px";
+  
+  this.appendChild(msg);
+  this.reset();
+});

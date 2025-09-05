@@ -11,7 +11,14 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-      <h2 class="logo">Dinesh Komara</h2>
+      <div class="header-bar">
+        <h2 class="logo">Dinesh Komara</h2>
+        <div class="hamburger" onclick="this.classList.toggle('open'); document.querySelector('.nav-list').classList.toggle('active')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <nav>
         <ul class="nav-list">
           <li><a href="#home" class="active">Home</a></li>
@@ -51,7 +58,7 @@
 
     <div class="about-cards">
       <div class="card">
-        <p><i class="fa-solid fa-location-dot"></i></p>
+        <p><a href="https://maps.app.goo.gl/qHd2eUoUnXVUnU336"><i class="fa-solid fa-location-dot"></i></a></p>
       </div>
       <div class="card">
         <p><a href="mailto:dineshkomara73@gmail.com"><i class="fa-solid fa-envelope"></i></a></p>
@@ -130,7 +137,7 @@
         <h3>Intelligent Medical Assistant Chatbot</h3>
         <p>Multilingual chatbot using LLM + embeddings. Provides symptom help, recommendations, and GIF emergency guides.</p>
         <div class="tags">
-          <span>LangChain</span><span>Python</span><span>LLM</span>
+          <span>LangChain</span><span>Python</span><span>LLM</span><span>ollama</span><span>AI</span><span>Streamlit</span>
         </div>
         <a href="https://github.com/Dineshkomara/INTELLIGENT-MEDICAL-ASSISTANT-CHATBOT-USING-THE-LLM" target="_blank" class="btn small">View on GitHub</a>
       </div>
@@ -142,7 +149,7 @@
         <h3>Watermark Applier</h3>
         <p>Tool for embedding text/image watermarks in PDFs & images. Includes a simple upload-based web UI.</p>
         <div class="tags">
-          <span>Python</span><span>OpenCV</span><span>HTML/CSS</span>
+          <span>Python</span><span>Flask</span><span>HTML/CSS</span><span>SQL</span>
         </div>
         <a href="https://github.com/Dineshkomara/Watermark-Applier" target="_blank" class="btn small">View on GitHub</a>
       </div>
@@ -170,6 +177,7 @@
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
+      <a href="https://drive.google.com/file/d/145SgUphDvIiFRQch_EHYWfb6zww_Ifgy/view?usp=sharing" target="_blank">
       <div class="timeline-content">
         <i class="fa-brands fa-amazon fa-3x"></i>
         <h3>Software Development Engineer Intern — Amazon</h3>
@@ -180,7 +188,24 @@
           <li>Collaborated with senior engineers on testing & deployment following Agile practices.</li>
         </ul>
       </div>
+      </a>
     </div>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <a href="https://drive.google.com/file/d/1FP2PIIDziYYn-B_H7oRx__wmNbTLqY_8/view?usp=sharing" target="_blank">
+  <div class="timeline-content">
+    <i class="fa-solid fa-hashtag fa-3x"></i>
+    <h3>ML Trainee — SHIASH</h3>
+    <span class="date">Mar 2024 – Jun 2024</span>
+    <ul>
+      <li>Completed structured training in Machine Learning concepts and workflows.</li>
+      <li>Worked on supervised and unsupervised learning techniques with Python.</li>
+      <li>Gained practical exposure to applying ML algorithms on real-world datasets.</li>
+    </ul>
+  </div>
+  </a>
+</div>
 
 
     <!-- You can add future experiences here in same format -->
@@ -194,36 +219,47 @@
 
     <div class="train-stop left">
       <div class="train-dot">
-        <img src="assets/sathyabama.png" alt="Sathyabama University">
+        <a href="https://drive.google.com/file/d/1X77f8UWiST9R-xD0th56SbQNa1M5AS9_/view?usp=sharing">
+          <img src="assets/sathyabama.png" alt="Sathyabama University">
+        </a>
       </div>
-      <div class="content">
-        <h3>Sathyabama Institute of Science and Technology</h3>
-        <span class="date">2021 – 2025</span>
-        <p>B.E. in Computer Science (AI & ML) · GPA: 9.4</p>
-      </div>
+      <a href="https://drive.google.com/file/d/1X77f8UWiST9R-xD0th56SbQNa1M5AS9_/view?usp=sharing">
+        <div class="content">
+          <h3>Sathyabama Institute of Science and Technology</h3>
+          <span class="date">2021 – 2025</span>
+          <p>B.E. in Computer Science (AI & ML) · GPA: 9.4</p>
+        </div>
+      </a>
     </div>
 
     <div class="train-stop right">
       <div class="train-dot">
-        <img src="assets/bhashyam.png" alt="Narayana Junior College">
+        <a href="https://drive.google.com/file/d/181qnWmBpVaHd58-cR-AN9UB2GrpUMJGO/view?usp=sharing">
+          <img src="assets/bhashyam.png" alt="BIIT Junior College">
+        </a>
       </div>
-      <div class="content">
-        <h3>BIIT Junior College, Guntur</h3>
-        <span class="date">2019 – 2021</span>
-        <p>Class XII · Percentage: 96.9%</p>
-      </div>
+      <a href="https://drive.google.com/file/d/181qnWmBpVaHd58-cR-AN9UB2GrpUMJGO/view?usp=sharing">
+        <div class="content">
+          <h3>BIIT Junior College, Guntur</h3>
+          <span class="date">2019 – 2021</span>
+          <p>Class XII · Percentage: 96.9%</p>
+        </div>
+      </a>
     </div>
 
     <div class="train-stop left">
       <div class="train-dot">
-        <img src="assets/bhashyam.png" alt="ZP High School">
+        <a href="https://drive.google.com/file/d/1-lJ-nOP3L5sIGF7Z-H0V7oPzbprFdo_i/view?usp=sharing">
+          <img src="assets/bhashyam.png" alt="Bhashyam Public School">
+        </a>
       </div>
-      <div class="content">
+      <a href="https://drive.google.com/file/d/1-lJ-nOP3L5sIGF7Z-H0V7oPzbprFdo_i/view?usp=sharing">
+        <div class="content">
         <h3>Bhashyam Public School</h3>
         <span class="date">2019</span>
         <p>Class X · GPA: 10/10</p>
-      </div>
-    </div>
+        </div>
+      </a>
 
   </div>
 </section>
@@ -232,31 +268,31 @@
   <h2>Certifications & Achievements</h2>
   <div class="cert-grid">
     <div class="cert-card">
-      <a href="https://nptel.ac.in/noc/E_Certificate/nptel_os.pdf" target="_blank"><i class="fa-solid fa-certificate"></i></a>
+      <a href="https://drive.google.com/file/d/10Ca_ZBo31KM5HWK7Rpv5vbuK70HrgidQ/view?usp=sharing" target="_blank"><i class="fa-solid fa-certificate"></i></a>
       <h4>Operating Systems</h4>
       <p>NPTEL</p>
     </div>
 
     <div class="cert-card">
-      <a href="https://nptel.ac.in/noc/E_Certificate/nptel_os.pdf" target="_blank" ><i class="fa-solid fa-brain"></i></a>
+      <a href="https://drive.google.com/file/d/1N0hTDKVTPDILuYLEV9xSliYqaUTqpZlW/view?usp=sharing" target="_blank" ><i class="fa-solid fa-brain"></i></a>
       <h4>Machine Learning with Python</h4>
-      <p>1StopAi, MATLAB</p>
+      <p>1StopAi, MATLAB,LinkedIn Learning</p>
     </div>
 
     <div class="cert-card">
-      <a href="https://nptel.ac.in/noc/E_Certificate/nptel_os.pdf" target="_blank" ><i class="fa-solid fa-satellite"></i></a>
+      <a href="https://drive.google.com/file/d/1428kbm_1M1dg0UQVFtK_vCPgScJV7oru/view?usp=sharing" target="_blank" ><i class="fa-solid fa-satellite"></i></a>
       <h4>Space Science Training</h4>
       <p>ISRO</p>
     </div>
 
     <div class="cert-card">
-      <a href="https://nptel.ac.in/noc/E_Certificate/nptel_os.pdf" target="_blank"><i class="fa-solid fa-award"></i></a>
+      <a href="https://drive.google.com/file/d/1Ei4RpXMTNt3gPVgIUDTDGR5D3PQr8KUW/view?usp=sharing" target="_blank"><i class="fa-solid fa-award"></i></a>
       <h4>Best Project</h4>
       <p>Intelligent Medical Assistant Chatbot</p>
     </div>
 
     <div class="cert-card">
-      <a href="https://nptel.ac.in/noc/E_Certificate/nptel_os.pdf" target="_blank"><i class="fa-solid fa-ranking-star"></i></a>
+      <a href="https://drive.google.com/file/d/1Eze6HNX9fwanD9Moe_7185VehEyucZdP/view?usp=sharing" target="_blank"><i class="fa-solid fa-ranking-star"></i></a>
       <h4>Top 10 Ranker</h4>
       <p>Sathyabama University</p>
     </div>
@@ -300,7 +336,7 @@
     <div class="contact-card">
       <i class="fa-solid fa-location-dot"></i>
       <h4>Location</h4>
-      <p>Anakapalle, Andhra Pradesh, India</p>
+      <p><a href="https://maps.app.goo.gl/qHd2eUoUnXVUnU336">Anakapalle, Andhra Pradesh, India</a></p>
     </div>
   </div>
 

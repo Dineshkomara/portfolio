@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -228,24 +227,25 @@ section {
   margin-bottom: 2rem;
 }
 
-/* Info Cards */
 .about-cards {
-  display: flex;
-  gap:35rem;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-evenly; /* evenly distributes the gap */
+  align-items: center;
   flex-wrap: wrap;
+  width: 100%; /* ensures it spans the full container */
 }
 
 .about-cards .card {
-  background: #fff;
-  padding: 1rem 1rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  flex: 0 1 2px;
-  max-width: 50px;
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.8rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .about-cards .card i {
@@ -725,4 +725,200 @@ section {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.8s ease;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto; /* push to right edge */
+}
+/* ===================== */
+/* Responsive Design Fix */
+/* ===================== */
+@media (max-width: 1024px) {
+  /* Reduce big gaps */
+  .about-section {
+    gap: 5rem;
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .about-img {
+    margin-left: 0;
+    width: 80%;
+    min-height: auto;
+  }
+
+  .about-cards {
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .sidebar-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sidebar .logo {
+    padding-right: 0;
+    font-size: 1.1rem;
+  }
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+  .profile-img {
+    max-height: 50vh;
+  }
+
+  /* About */
+  .about-section {
+    padding: 2rem 1rem;
+  }
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline (Experience & Education) */
+  .train-stop,
+  .timeline {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .train-track::before {
+    left: 10px; /* move line to left */
+  }
+  .train-stop.left,
+  .train-stop.right {
+    left: 0;
+    text-align: center;
+  }
+  .train-dot {
+    left: -25px !important;
+    right: auto !important;
+  }
+
+  /* Contact */
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* allows wrapping if screen is too small */ 
+  }
+}
+
+.about-cards .card {
+  flex: 1 1 auto;
+  max-width: 80px; /* keeps icons small and neat */
+  text-align: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #111;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+}
+.header-bar {
+  display: flex;
+  justify-content: space-between; /* keeps name on left, hamburger on right */
+  align-items: center;           /* aligns them vertically */
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+a {
+      color: inherit; /* Inherits color from the parent element */
+      text-decoration: none; /* Removes the underline */
 }
