@@ -168,3 +168,21 @@ document.querySelector(".contact-form").addEventListener("submit", function(e) {
   this.appendChild(msg);
   this.reset();
 });
+const toggleBtn = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme === "dark") {
+  document.body.classList.add("dark");
+  toggleBtn.innerHTML = "<i class='fa-solid fa-sun fa-2x'></i>";
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    toggleBtn.innerHTML = "<i class='fa-solid fa-sun fa-2x'></i>";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.innerHTML = "<i class='fa-solid fa-moon fa-2x'></i>";
+    localStorage.setItem("theme", "light");
+  }
+});
