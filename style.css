@@ -124,10 +124,13 @@ header nav {
 }
 
 .profile-img {
-  padding-top: 70px;
-  max-height: 95vh;
-  width: auto;
-  object-fit: cover;
+  width: 250px;       /* fixed square size */
+  height: 250px;
+  border-radius: 50%; /* perfect circle */
+  object-fit: cover;  /* zoom/crop instead of squish */
+  object-position: top center; /* adjust focus (top/center/left/right) */
+  border: 4px solid #ff9800;   /* optional border */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
 .profile-img:hover {
